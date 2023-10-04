@@ -75,10 +75,8 @@ start_city = input("Enter start city:\n")   # Take input of the start city
 if not start_city in map:   # Check if the start city actually exists on the map
     print("The city does not exist on the map!")
     exit()
-goal_city = input("Enter goal city\n")   # Take input of the goal city
-if not start_city in map:    # Check if the start city actually exists on the map
-    print("The city does not exist on the map!")
-    exit()
+    
+goal_city = "Bucharest" # Set the goal city as Bucharest
 
 output = depth_first(start_city, goal_city)     # Call the depth first function
 
@@ -106,6 +104,8 @@ for i in range(0, size - 1):
     elif cities_order2 in cost:
         total_cost = total_cost + cost[cities_order2]
 print("\nTotal cost =", total_cost)
+
+print("\nThe number of cities visited by the algorithm before the goal city was found: ", len(dfs_output))
 
 print("\nThe cities visited by the algorithm during the search were:")
 print(dfs_output)
